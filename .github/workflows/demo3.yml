@@ -1,7 +1,7 @@
 name: demo3
 on:
     workflow_dispatch:
-    push:
+    #push:
   
 jobs:
     cloning-repo:
