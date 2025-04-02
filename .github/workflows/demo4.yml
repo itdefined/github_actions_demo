@@ -1,7 +1,7 @@
 name: demo4
 on:
     workflow_dispatch:
-    push:
+    #push:
 jobs:
     check-the-application:
         runs-on: ubuntu-latest
