@@ -1,0 +1,13 @@
+name: demo4
+on:
+    workflow_dispatch:
+    push:
+jobs:
+    check-the-application:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - run: ls -lart
+        
+        
+
