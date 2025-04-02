@@ -1,21 +1,26 @@
-name: 'Python Hello Action'
-description: 'A simple GitHub Action using Python without Docker'
+name: "Python Hello Action"
+description: "A simple GitHub Action using Python"
+
 inputs:
   name:
-    description: 'Your name'
+    description: "Your name"
     required: true
-    default: 'Developer'
-outputs:
-  current_time:
-    description: 'The current timestamp'
+    default: "Developer"
+
 runs:
-  using: 'composite'
+  using: "composite"
   steps:
     - name: Setup Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.x'
+        python-version: "3.x"
+
+    - name: Debug Inputs
+      shell: bash
+      run: echo "INPUT_NAME=${{ inputs.name }}"
 
     - name: Run Python Script
       shell: bash
+      env:
+        INPUT_NAME: ${{ inputs.name }}  # ✅ Explicitly setting INPUT_NAME
       run: python $GITHUB_ACTION_PATH/hello.py
