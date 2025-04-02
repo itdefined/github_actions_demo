@@ -1,16 +1,17 @@
 import os
 import datetime
 
-# Read input correctly (GitHub sets it as "INPUT_NAME")
+# Print all environment variables for debugging
+print("🔍 Debugging: Environment Variables")
+for key, value in os.environ.items():
+    print(f"{key} = {value}")
+
+# Read input correctly
 name = os.getenv("INPUT_NAME", "Developer")  # ✅ Corrected input handling
 
-# Print output
+# Print greeting
 print(f"Hello, {name}!")
 
-# Get current time
+# Get current timestamp
 current_time = datetime.datetime.utcnow().isoformat()
-
-# ✅ Fix: Use Environment File Instead of `set-output`
-env_file = os.getenv("GITHUB_ENV")  # GitHub provides this path
-with open(env_file, "a") as file:
-    file.write(f"CURRENT_TIME={current_time}\n")
+print(f"Current Time: {current_time}")
