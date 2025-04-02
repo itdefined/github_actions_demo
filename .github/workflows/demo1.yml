@@ -6,4 +6,4 @@ jobs:
   demo-github-actions:
     runs-on: ubuntu-latest
     steps:
-      - run: "Welcome to Github Actions"
+      - run: echo "Welcome to Github Actions"
