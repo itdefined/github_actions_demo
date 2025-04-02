@@ -14,10 +14,4 @@ jobs:
             - run: npm install
             - run: npm start &
             - run: sleep 5
-            # Check if the app is running on port 3000
-            - run: |
-                if lsof -i :3001 > /dev/null 2>&1; then
-                echo "Application is running on port 3000"
-                else
-                echo "Application is NOT running on port 3000. Checking logs..."
-                fi
+            - run: curl -I http://localhost:3000 || exit 1
