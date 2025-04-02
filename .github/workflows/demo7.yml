@@ -6,10 +6,11 @@ jobs:
   run_python_action:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository  # 🔹 This step is mandatory
+      - name: Checkout repository
         uses: actions/checkout@v4
+            - run:ls
 
       - name: Run custom Python action
-        uses: ./github/actions/hello  # 🔹 Correct relative path
+        uses: ./github/actions/hello 
         with:
           name: "GitHub User"
