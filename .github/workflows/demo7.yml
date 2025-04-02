@@ -16,6 +16,6 @@ jobs:
           ls -lart .github/actions/hello
 
       - name: Run custom Python action
-        uses: ././github/actions/hello 
+        uses: ./.github/actions/hello 
         with:
           name: "GitHub User"
