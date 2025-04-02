@@ -8,7 +8,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-            - run:ls
+
+      - name: List directory contents
+        run: ls -R  # Recursively list files to verify action location
 
       - name: Run custom Python action
         uses: ./github/actions/hello 
