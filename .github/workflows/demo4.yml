@@ -16,7 +16,7 @@ jobs:
             - run: sleep 5
             # Check if the app is running on port 3000
             - run: |
-                if lsof -i :3000 > /dev/null 2>&1; then
+                if lsof -i :3001 > /dev/null 2>&1; then
                 echo "Application is running on port 3000"
                 else
                 echo "Application is NOT running on port 3000. Checking logs..."
