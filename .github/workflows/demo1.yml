@@ -1,0 +1,4 @@
+name: demo1
+run-name: ${{ github.actor }} is testing out GitHub Actions
+on:
+  work_dispatch
