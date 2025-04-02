@@ -1,0 +1,21 @@
+name: 'Python Hello Action'
+description: 'A simple GitHub Action using Python without Docker'
+inputs:
+  name:
+    description: 'Your name'
+    required: true
+    default: 'Developer'
+outputs:
+  current_time:
+    description: 'The current timestamp'
+runs:
+  using: 'composite'
+  steps:
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Run Python Script
+      shell: bash
+      run: python $GITHUB_ACTION_PATH/hello.py
