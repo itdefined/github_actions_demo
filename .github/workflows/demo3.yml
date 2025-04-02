@@ -1,0 +1,11 @@
+name: demo3
+on:
+    workflow_dispatch:
+    push:
+  
+jobs:
+    cloning-repo:
+      runs-on: self-hosted  # Use self-hosted machine
+      steps:
+        - uses: actions/checkout@v4
+        - run: ls -lart
