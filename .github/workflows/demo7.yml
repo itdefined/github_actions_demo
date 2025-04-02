@@ -18,4 +18,4 @@ jobs:
       - name: Run custom Python action
         uses: ./.github/actions/hello 
         with:
-          name: "GitHub User"
+          name: "Sachin Tendulkar"
